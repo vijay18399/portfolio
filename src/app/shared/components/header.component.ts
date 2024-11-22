@@ -1,10 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { TOOL_METADATA } from '../constants/tool-header.constants';
+import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'tool-header',
+  standalone:true,
+  imports:[MatIcon, MatButton,FlexLayoutModule, CommonModule],
   template: `
     <header
       [ngStyle]="{ backgroundColor: toolBarColor }"
@@ -46,6 +51,7 @@ import { TOOL_METADATA } from '../constants/tool-header.constants';
         background: none;
         cursor: pointer;
         color: #333;
+        margin-right: 15px;
       }
 
       .back-button mat-icon {

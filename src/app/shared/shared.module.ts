@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatMenuModule} from '@angular/material/menu';
 
 // Angular Material Modules
 import { MatButtonModule } from '@angular/material/button';
@@ -20,19 +21,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import {MatChipsModule} from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSliderModule } from '@angular/material/slider';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HeaderComponent } from './components/header.component';
-import { LoaderComponent } from './components/loader.component';
 
 @NgModule({
   declarations :[
-    HeaderComponent,
-    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -67,7 +65,7 @@ import { LoaderComponent } from './components/loader.component';
     MatChipsModule,
     MatSidenavModule,
     FlexLayoutModule
- ],
+   ],
   exports:[
     MatSliderModule,
     MatButtonModule,
@@ -100,10 +98,16 @@ import { LoaderComponent } from './components/loader.component';
     MatTableModule,
     MatChipsModule,
     MatSidenavModule,
+    MatTableModule,
+    MatInputModule,
     FlexLayoutModule,
-    HeaderComponent,
-    LoaderComponent
-
+    MatMenuModule
   ],
+  providers:[
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    },
+  ]
 })
 export class SharedModule {}

@@ -154,5 +154,10 @@ export class HomeComponent {
       route: '/dictionary',
       image: 'images/4.png',
     },
+    {
+      title: 'Whiteboard',
+      route: '/whiteboard',
+      image: 'images/5.png',
+    }
   ];
 }

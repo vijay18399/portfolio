@@ -32,7 +32,7 @@ import { Word } from '../models/word';
       <div *ngIf="(error$ | async) as error" fxLayout="row" fxLayoutAlign="center center" class="error-container">
         <mat-card class="error-card" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
           <mat-icon>error</mat-icon>
-          <span>{{ error }}</span>
+          <span>Unable to Load Spell Bee, Please try Later</span>
         </mat-card>
       </div>
 
@@ -100,6 +100,7 @@ import { Word } from '../models/word';
         border: 1px solid #b71c1c;
         border-radius: 8px;
         font-size: 1rem;
+        margin: 0 20px;
       }
       .score-timer-panel{
         width : 100%;

@@ -1,0 +1,1 @@
+import{kd as e,na as t,za as i}from"./chunk-E56YF62E.js";var r=class o{static{this.\u0275fac=function(m){return new(m||o)}}static{this.\u0275mod=i({type:o})}static{this.\u0275inj=t({imports:[e]})}};export{r as PronunciationModule};

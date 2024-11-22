@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'loader',
+  standalone:true,
+  imports:[],
   template: `
     <div class="loader">
       <div></div>

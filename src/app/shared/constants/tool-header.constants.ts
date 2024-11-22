@@ -8,5 +8,12 @@ export const TOOL_METADATA : any = {
     title: 'Dictionary',
     logo: 'images/dictionary.png',
     toolBarColor:'white'
+  },
+  Whiteboard:{
+    title: 'Whiteboard',
+    logo: 'images/whiteboard.png',
+    toolBarColor:'white'
   }
+
+
 };

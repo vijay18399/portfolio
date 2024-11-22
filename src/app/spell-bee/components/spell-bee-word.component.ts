@@ -5,7 +5,6 @@ import { HotToastService } from '@ngxpert/hot-toast';
 import { Observable, Subscription } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { selectCurrentWord } from '../../store/selectors';
-import { NgOtpInputComponent } from 'ng-otp-input';
 
 @Component({
   selector: 'spell-bee-word',

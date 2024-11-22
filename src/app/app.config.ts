@@ -7,6 +7,7 @@ import { SpellBeeEffects } from './store/effects';
 import { spellBeeReducer } from './store/reducers';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore({ spellBee: spellBeeReducer }),
     provideEffects([SpellBeeEffects]),
-    provideHttpClient(), provideAnimationsAsync()
+    provideHttpClient(), provideAnimationsAsync(),
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy,
+    },
   ]
 };

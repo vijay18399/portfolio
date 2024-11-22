@@ -50,3 +50,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 *::-webkit-scrollbar-thumb:active {
   background: #5c6bc0; /* Even darker blue when active */
 }
+
+.canvas-container{
+  canvas{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+  }
+}

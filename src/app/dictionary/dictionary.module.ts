@@ -8,6 +8,8 @@ import { DictionaryService } from './services/dictionary.service';
 import { SharedModule } from "../shared/shared.module";
 import { WordDetails } from './components/word-details.component';
 import { Search } from './components/search.component';
+import { HeaderComponent } from '../shared/components/header.component';
+import { LoaderComponent } from '../shared/components/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { Search } from './components/search.component';
     WordHeaderComponent,
   ],
   imports: [
+    LoaderComponent,
+    HeaderComponent,
     SharedModule,
     DictionaryRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
     SharedModule
-],
+  ],
   providers: [DictionaryService],
 })
 export class DictionaryModule {}
